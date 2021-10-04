@@ -6,6 +6,8 @@ from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 
+from connector.mysql.source import GetData
+
 tz = pytz.timezone('Asia/Shanghai')
 dt = datetime.now(tz=tz) - timedelta(days=1)
 utc_dt = dt.astimezone(pytz.utc).replace(tzinfo=None)
@@ -58,3 +60,15 @@ run_python_print = PythonOperator(
 # [END howto_operator_python]
 
 run_echo >> run_python_print
+
+
+# 连接mysql
+getMysqlVersion = GetData.getMaysqlVersion()
+run_python_connect_mysql = PythonOperator(
+    task_id='run_python_connect_mysql',
+    provide_context=True,
+    python_callable=getMysqlVersion,
+    dag=dag,
+)
+
+run_python_print >> run_python_connect_mysql
