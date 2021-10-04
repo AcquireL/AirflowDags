@@ -1,5 +1,4 @@
 import datetime
-from builtins import range
 from datetime import timedelta
 
 import pytz as pytz
