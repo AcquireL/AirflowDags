@@ -23,7 +23,7 @@ default_args = {
 dag = DAG(
     dag_id='bash_operator_test',
     default_args=default_args,
-    schedule_interval="5/* * * * *",
+    schedule_interval="*/5 * * * *",
     catchup=False
 )
 
