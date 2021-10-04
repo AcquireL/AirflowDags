@@ -1,10 +1,12 @@
-from datetime import datetime, timedelta, time
-
+import sys
+sys.path.append("../../")
 import pytz as pytz
 from airflow.models import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
+from datetime import datetime, timedelta, time
+
 
 from connector.mysql.source import GetData
 
