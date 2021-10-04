@@ -23,5 +23,5 @@ class GetData:
         self.db.close()
 
 
-getData = GetData()
-getData.getMaysqlVersion()
+# getData = GetData()
+# getData.getMaysqlVersion()

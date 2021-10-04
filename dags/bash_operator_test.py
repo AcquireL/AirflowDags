@@ -63,7 +63,7 @@ run_echo >> run_python_print
 
 
 # 连接mysql
-getMysqlVersion = GetData.getMaysqlVersion()
+getMysqlVersion = GetData().getMaysqlVersion()
 run_python_connect_mysql = PythonOperator(
     task_id='run_python_connect_mysql',
     provide_context=True,
