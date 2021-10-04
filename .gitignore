@@ -1,0 +1,31 @@
+# vscode
+.DS_Store
+.vscode
+
+#idea
+.idea
+
+# data and result cache
+data
+result
+
+# log cache
+logs
+
+# airflow server cache
+airflow
+
+# baidubce dist
+.dist
+
+# python ignore
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+
+#setuptools cache
+dist
+build
+output
+
