@@ -1,5 +1,5 @@
 import sys
-sys.path.append("../../")
+sys.path.append(sys.path)
 
 from connector.mysql.source.GetData import GetData
 

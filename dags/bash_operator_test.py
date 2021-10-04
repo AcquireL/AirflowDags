@@ -1,5 +1,5 @@
 import sys
-sys.path.append("../../")
+sys.path.append("../")
 import pytz as pytz
 from airflow.models import DAG
 from airflow.operators.dummy_operator import DummyOperator
